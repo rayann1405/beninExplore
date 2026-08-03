@@ -44,4 +44,5 @@ next-env.d.ts
 .codegraph/
 
 # source 3D scans (raw, non-runtime) — runtime uses *.opt.glb
-public/modele/tier1/*.glb
+public/modele/tier1/amazone.glb
+public/modele/tier1/bio-guera.glb
