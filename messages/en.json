@@ -1,0 +1,113 @@
+{
+  "common": {
+    "mapTitle": "Benin Explore",
+    "mapSubtitle": "An interactive exploration",
+    "overview": "Overview",
+    "loading": "Loading...",
+    "noWebGL": "Your browser does not support 3D.",
+    "nearbyPlaces": "Nearby Places",
+    "backToMap": "Back to map",
+    "about": "About",
+    "language": "Language",
+    "region": "Region",
+    "category": "Category",
+    "discoverPlace": "Discover this place",
+    "keyFact": "Key fact",
+    "journeyTitle": "Benin, north to south",
+    "journeyHint": "Scroll to travel across the country",
+    "journeyScroll": "Scroll",
+    "journeyOutroTitle": "The journey goes on",
+    "journeyOutroText": "Twelve places, one route — there's plenty more to discover beyond this itinerary.",
+    "journeyOutroCta": "Learn more about this project",
+    "journeyReplay": "Replay the journey",
+    "freeExplore": "Explore freely",
+    "backToJourney": "Back to the journey",
+    "close": "Close"
+  },
+  "regions": {
+    "nord": "North",
+    "centre": "Center",
+    "sud": "South"
+  },
+  "categories": {
+    "nature": "Nature",
+    "culture": "Culture",
+    "histoire": "History",
+    "ville": "City",
+    "monument": "Monument"
+  },
+  "poi": {
+    "pendjari": {
+      "name": "Pendjari National Park",
+      "tagline": "Large protected area in the northwest",
+      "description": "Large protected area in the northwest of the country, Atacora savannas and cliffs, emblematic wildlife (lions, elephants, hippopotamuses).",
+      "fact": "UNESCO Biosphere Reserve"
+    },
+    "tanongou": {
+      "name": "Tanongou Falls",
+      "tagline": "Waterfall and natural pool in the Atacora chain",
+      "description": "Waterfall and natural pool in the Atacora chain.",
+      "fact": "A 20-meter high waterfall"
+    },
+    "dassa": {
+      "name": "Dassa-Zoumè Hills",
+      "tagline": "Around forty granite hills",
+      "description": "Around forty granite hills, caves and sanctuaries, a place of Marian pilgrimage and Vodun traditions.",
+      "fact": "Place of religious coexistence"
+    },
+    "abomey": {
+      "name": "Royal Palaces of Abomey",
+      "tagline": "Former capital of the Danxomè kingdom",
+      "description": "Former capital of the Danxomè (Dahomey) kingdom, palaces of the twelve kings adorned with bas-reliefs, classified as a UNESCO World Heritage site.",
+      "fact": "UNESCO World Heritage"
+    },
+    "ouidah": {
+      "name": "Ouidah",
+      "tagline": "Former trading post on the transatlantic slave trade route",
+      "description": "Former trading post on the transatlantic slave trade route (Slave Route, Door of No Return), also the cradle of the Vodun cult (Temple of Pythons, international Vodun festival).",
+      "fact": "Cradle of the Vodun cult"
+    },
+    "foret-kpasse": {
+      "name": "Kpassè Sacred Forest",
+      "tagline": "Forest island in the heart of Ouidah",
+      "description": "Forest island in the heart of Ouidah (about 4 hectares today, compared to about thirty originally), dedicated to King Kpassè, legendary founder of the city, whose spirit is said to be incarnated in a sacred tree (iroko) at its center. Also operates as an open-air museum: statues of Vodun deities (Mami Wata, Gou, Tolègba...), notably those of sculptor Cyprien Tokoudagba. Site of ritual ceremonies.",
+      "fact": "Open-air museum of Vodun statues"
+    },
+    "ganvie": {
+      "name": "Ganvié",
+      "tagline": "Lake village",
+      "description": "Lake village built on stilts in the middle of Lake Nokoué.",
+      "fact": "The Venice of Africa"
+    },
+    "cotonou": {
+      "name": "Cotonou",
+      "tagline": "Economic lung of the country",
+      "description": "Largest city and economic lung of the country, Dantokpa market, booming art scene.",
+      "fact": "Largest market in West Africa"
+    },
+    "amazone": {
+      "name": "Amazon Monument",
+      "tagline": "Tribute to the Agoodjié warriors",
+      "description": "Monumental bronze statue 30 meters high (about 150 tons), inaugurated on July 30, 2022, on the Amazones esplanade in Cotonou, facing the Atlantic Ocean. Work of the Chinese sculptor Li Xiangqun, it pays tribute to the Agoodjié — the Amazons of Dahomey, an all-female military regiment active until the end of the 19th century. It is the second largest statue in Africa after the African Renaissance Monument in Dakar.",
+      "fact": "30 meters, tribute to the Agoodjié warriors"
+    },
+    "bio-guera": {
+      "name": "Bio Guéra Monument",
+      "tagline": "Figure of resistance to colonization",
+      "description": "Equestrian statue of bronze, copper and steel (about 7 meters high, 13 tons), erected at the roundabout of the Cotonou international airport and inaugurated on July 30, 2022. It honors Bio Guéra, prince of the Bariba kingdom and Wasangari warlord, a figure of resistance to the French colonial conquest at the end of the 19th century, who died in 1916 near Bembéréké.",
+      "fact": "Figure of resistance to colonization"
+    },
+    "porto-novo": {
+      "name": "Porto-Novo",
+      "tagline": "Official capital of Benin",
+      "description": "Official capital of Benin, Afro-Brazilian architecture, royal palace, Yoruba influences.",
+      "fact": "Afro-Brazilian architecture"
+    },
+    "grand-popo": {
+      "name": "Grand-Popo",
+      "tagline": "Quiet beaches at the mouth of the Mono river",
+      "description": "Quiet beaches at the mouth of the Mono river.",
+      "fact": "Mouth of the Mono river"
+    }
+  }
+}
