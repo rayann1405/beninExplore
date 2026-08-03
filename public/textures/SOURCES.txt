@@ -1,0 +1,5 @@
+Textures CC0 — ambientCG (https://ambientcg.com) — 1K JPG packs:
+laterite: Ground107
+savane: Ground080
+foret: Ground037
+sable: Ground054
