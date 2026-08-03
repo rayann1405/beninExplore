@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0B1A2B;
+  --foreground: #F2EDE1;
+  --color-ink: #061019;
+  --color-paper: #F2EDE1;
+  --color-laterite: #C1440E;
+  --color-laterite-light: #E86A34;
+  --color-gold: #E8A93A;
+  --color-palm: #2F6B4F;
+  --color-palm-light: #4CAF7A;
+  --color-sky: #8FA6C7;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-ink: var(--color-ink);
+  --color-paper: var(--color-paper);
+  --color-laterite: var(--color-laterite);
+  --color-laterite-light: var(--color-laterite-light);
+  --color-gold: var(--color-gold);
+  --color-palm: var(--color-palm);
+  --color-palm-light: var(--color-palm-light);
+  --color-sky: var(--color-sky);
+  
+  --font-sans: var(--font-ibm-sans);
+  --font-mono: var(--font-ibm-mono);
+  --font-display: var(--font-bricolage);
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar for webkit */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-ink);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-laterite);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-laterite-light);
+}
