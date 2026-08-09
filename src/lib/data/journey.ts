@@ -54,15 +54,16 @@ export const journey: JourneySection[] = [
     asset: { url: '/modele/tier1/bio-guera.opt.glb', scale: 4 },
   },
   {
-    id: 'abomey',
+    id: 'behanzin',
     type: 'monument',
-    name: "Palais royaux d'Abomey",
-    tagline: 'Mémoire des douze rois du Danxomè',
+    name: 'Statue du roi Béhanzin',
+    tagline: 'Le dernier roi rebelle du Danxomè',
     description:
-      "Ancienne capitale du royaume du Danxomè (Dahomey), les palais des douze rois sont ornés de bas-reliefs racontant l'histoire du royaume. Classés au patrimoine mondial de l'UNESCO, ils comptent parmi les témoins les plus précieux de la royauté ouest-africaine.",
+      "Statue du roi Béhanzin (1845–1906), dernier souverain indépendant du Danxomè, érigée à Abomey, ancienne capitale du royaume. Proclamé roi en 1889, il organise une résistance farouche à la conquête coloniale française pendant les guerres de 1890 et 1892–1894, avant d'être capturé et exilé à la Martinique puis en Algérie, où il meurt en 1906. Symbole du refus de la soumission, sa figure est célébrée dans tout le Bénin.",
     location: 'Abomey',
-    fact: "Classé au patrimoine mondial de l'UNESCO",
+    fact: 'Son trône et ses reliques ont été restitués au Bénin en 2021',
     palette: 'latérite',
+    asset: { url: '/modele/tier1/behanzin_statut.opt.glb', scale: 6 },
   },
   {
     id: 'porte-non-retour',
