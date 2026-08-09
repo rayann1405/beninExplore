@@ -75,6 +75,7 @@ export const journey: JourneySection[] = [
     location: 'Ouidah',
     fact: "Bout de la Route des Esclaves, face à l'océan",
     palette: 'nuit-indigo',
+    asset: { url: '/modele/tier1/porte_du_non_retour.opt.glb', scale: 9 },
   },
   {
     id: 'vodun-days',
