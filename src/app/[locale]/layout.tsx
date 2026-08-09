@@ -2,20 +2,24 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
-import { Bricolage_Grotesque, IBM_Plex_Sans, IBM_Plex_Mono } from 'next/font/google';
+import { Marcellus, Sen, IBM_Plex_Mono } from 'next/font/google';
 import '../globals.css';
 import { ReactNode } from 'react';
 import Header from '@/components/layout/Header';
 
-const bricolage = Bricolage_Grotesque({ 
+// Marcellus : serif classique « gravé dans la pierre », en écho aux statues
+// et bas-reliefs d'Abomey. Sen : sans géométrique dessinée par un designer
+// ouest-africain (Mono Lisa) — le volet moderne du duo tradition/modernité.
+const marcellus = Marcellus({
+  weight: ['400'],
   subsets: ['latin'],
-  variable: '--font-bricolage',
+  variable: '--font-marcellus',
 });
 
-const ibmSans = IBM_Plex_Sans({
+const sen = Sen({
   weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
-  variable: '--font-ibm-sans',
+  variable: '--font-sen',
 });
 
 const ibmMono = IBM_Plex_Mono({
@@ -45,7 +49,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${bricolage.variable} ${ibmSans.variable} ${ibmMono.variable}`}>
+    <html lang={locale} className={`${marcellus.variable} ${sen.variable} ${ibmMono.variable}`}>
       <body className="antialiased flex flex-col min-h-screen">
         <NextIntlClientProvider messages={messages}>
           <Header />

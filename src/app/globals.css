@@ -1,16 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0B1A2B;
-  --foreground: #F2EDE1;
-  --color-ink: #061019;
-  --color-paper: #F2EDE1;
-  --color-laterite: #C1440E;
-  --color-laterite-light: #E86A34;
-  --color-gold: #E8A93A;
-  --color-palm: #2F6B4F;
-  --color-palm-light: #4CAF7A;
-  --color-sky: #8FA6C7;
+  --background: #0B0A07;
+  --foreground: #F5EFE2;
+  --color-ink: #0B0A07;
+  --color-paper: #F5EFE2;
+  --color-laterite: #C14B1A;
+  --color-laterite-light: #E8743B;
+  --color-gold: #E0A83E;
+  --color-gold-light: #F2C878;
+  --color-palm: #2E6B4E;
+  --color-palm-light: #55B184;
+  --color-indigo: #233C63;
+  --color-indigo-light: #93A9C9;
+  --color-bronze: #A8722A;
 }
 
 @theme inline {
@@ -21,13 +24,16 @@
   --color-laterite: var(--color-laterite);
   --color-laterite-light: var(--color-laterite-light);
   --color-gold: var(--color-gold);
+  --color-gold-light: var(--color-gold-light);
   --color-palm: var(--color-palm);
   --color-palm-light: var(--color-palm-light);
-  --color-sky: var(--color-sky);
-  
-  --font-sans: var(--font-ibm-sans);
+  --color-indigo: var(--color-indigo);
+  --color-indigo-light: var(--color-indigo-light);
+  --color-bronze: var(--color-bronze);
+
+  --font-sans: var(--font-sen);
   --font-mono: var(--font-ibm-mono);
-  --font-display: var(--font-bricolage);
+  --font-display: var(--font-marcellus);
 }
 
 html, body {
@@ -41,6 +47,24 @@ body {
   overflow-x: hidden;
 }
 
+::selection {
+  background: var(--color-gold);
+  color: var(--color-ink);
+}
+
+/* Treillis de losanges — clin d'œil aux appliqués Adanhoumè d'Abomey */
+@utility diamond-grid {
+  background-image:
+    linear-gradient(45deg, transparent 46%, rgb(224 168 62 / 0.07) 46%, rgb(224 168 62 / 0.07) 50%, transparent 50%),
+    linear-gradient(-45deg, transparent 46%, rgb(224 168 62 / 0.07) 46%, rgb(224 168 62 / 0.07) 50%, transparent 50%);
+  background-size: 72px 72px;
+}
+
+/* Grain cinématographique subtil par-dessus la scène 3D */
+@utility grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");
+}
+
 /* Custom scrollbar for webkit */
 ::-webkit-scrollbar {
   width: 8px;
@@ -49,9 +73,9 @@ body {
   background: var(--color-ink);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-laterite);
+  background: var(--color-bronze);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-laterite-light);
+  background: var(--color-gold);
 }

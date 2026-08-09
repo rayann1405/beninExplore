@@ -8,6 +8,7 @@
     "noWebGL": "Your browser does not support 3D.",
     "journeyOutroTitle": "The journey continues",
     "journeyOutroText": "Six stops, one trail — so many places and celebrations still to discover in Benin.",
+    "scrollHint": "Scroll",
     "close": "Close"
   }
 }

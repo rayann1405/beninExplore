@@ -8,6 +8,7 @@
     "noWebGL": "Votre navigateur ne supporte pas la 3D.",
     "journeyOutroTitle": "Le voyage continue",
     "journeyOutroText": "Six étapes, une seule piste — il reste tant de lieux et de rendez-vous à découvrir au Bénin.",
+    "scrollHint": "Défiler",
     "close": "Fermer"
   }
 }

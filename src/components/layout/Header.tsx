@@ -6,24 +6,30 @@ export default function Header() {
   const t = useTranslations('common');
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 px-6 py-4 flex items-center justify-between pointer-events-none">
-      <Link href="/" className="pointer-events-auto">
-        <div className="flex flex-col">
-          <h1 className="font-display font-bold text-2xl text-paper m-0 leading-none">
-            Bénin <span className="text-laterite">Explore</span>
-          </h1>
-          <span className="font-mono text-xs text-paper/70 tracking-widest uppercase mt-1">
+    <header className="pointer-events-none fixed top-0 left-0 right-0 z-50 flex items-center justify-between border-b border-paper/5 px-6 py-4 md:px-10">
+      <Link href="/" className="pointer-events-auto group flex items-center gap-3.5">
+        <span className="grid h-8 w-8 place-items-center border border-gold/40">
+          <span className="h-2.5 w-2.5 rotate-45 border border-gold transition-transform duration-300 group-hover:rotate-[135deg]" />
+        </span>
+        <span className="flex flex-col">
+          <span className="font-display text-2xl leading-none tracking-wide text-paper">
+            Bénin <span className="text-gold">Explore</span>
+          </span>
+          <span className="mt-1.5 font-mono text-[10px] uppercase tracking-[0.3em] text-paper/60">
             {t('mapSubtitle')}
           </span>
-        </div>
+        </span>
       </Link>
-      
-      <div className="flex items-center gap-6 pointer-events-auto">
-        <Link href="/a-propos" className="text-paper hover:text-laterite-light font-sans text-sm transition-colors">
+
+      <nav className="flex items-center gap-6">
+        <Link
+          href="/a-propos"
+          className="pointer-events-auto font-sans text-sm text-paper/80 transition-colors hover:text-gold-light"
+        >
           {t('about')}
         </Link>
         <LocaleSwitcher />
-      </div>
+      </nav>
     </header>
   );
 }
