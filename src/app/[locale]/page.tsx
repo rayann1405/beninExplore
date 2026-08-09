@@ -1,6 +1,8 @@
-import MapHero from '@/components/map/MapHero';
-import CategoryFilters from '@/components/map/CategoryFilters';
-import JourneyOverlay from '@/components/journey/JourneyOverlay';
+import ExpeditionCanvas from '@/components/journey/ExpeditionCanvas';
+import JourneySections from '@/components/journey/ui/JourneySections';
+import SideNav from '@/components/journey/ui/SideNav';
+import ProgressIndicator from '@/components/journey/ui/ProgressIndicator';
+import Outro from '@/components/journey/ui/Outro';
 import { setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 
@@ -13,14 +15,13 @@ export default async function HomePage({ params }: { params: Promise<{locale: st
   setRequestLocale(locale);
 
   return (
-    <div className="relative w-full bg-background">
-      <MapHero />
-      <JourneyOverlay />
-      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 w-full flex justify-center px-4 pointer-events-none">
-        <div className="pointer-events-auto">
-          <CategoryFilters />
-        </div>
-      </div>
+    <div className="relative">
+      {/* Canvas 3D fixe en arrière-plan, sous les sections DOM */}
+      <ExpeditionCanvas />
+      <JourneySections />
+      <Outro />
+      <SideNav />
+      <ProgressIndicator />
     </div>
   );
 }

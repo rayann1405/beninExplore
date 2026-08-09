@@ -1,113 +1,13 @@
 {
   "common": {
     "mapTitle": "Bénin Explore",
-    "mapSubtitle": "Une exploration interactive",
-    "overview": "Vue d'ensemble",
-    "loading": "Chargement...",
-    "noWebGL": "Votre navigateur ne supporte pas la 3D.",
-    "nearbyPlaces": "Lieux à proximité",
-    "backToMap": "Retour à la carte",
+    "mapSubtitle": "Un parcours immersif",
     "about": "À propos",
     "language": "Langue",
-    "region": "Région",
-    "category": "Catégorie",
-    "discoverPlace": "Découvrir le lieu",
-    "keyFact": "Fait marquant",
-    "journeyTitle": "Le Bénin, du nord au sud",
-    "journeyHint": "Faites défiler pour voyager à travers le pays",
-    "journeyScroll": "Défiler",
+    "loading": "Chargement...",
+    "noWebGL": "Votre navigateur ne supporte pas la 3D.",
     "journeyOutroTitle": "Le voyage continue",
-    "journeyOutroText": "Douze lieux, une seule piste — il en reste bien d'autres à découvrir en dehors de cet itinéraire.",
-    "journeyOutroCta": "En savoir plus sur ce projet",
-    "journeyReplay": "Revoir le voyage",
-    "freeExplore": "Explorer librement",
-    "backToJourney": "Retour au parcours",
+    "journeyOutroText": "Six étapes, une seule piste — il reste tant de lieux et de rendez-vous à découvrir au Bénin.",
     "close": "Fermer"
-  },
-  "regions": {
-    "nord": "Nord",
-    "centre": "Centre",
-    "sud": "Sud"
-  },
-  "categories": {
-    "nature": "Nature",
-    "culture": "Culture",
-    "histoire": "Histoire",
-    "ville": "Ville",
-    "monument": "Monument"
-  },
-  "poi": {
-    "pendjari": {
-      "name": "Parc national de la Pendjari",
-      "tagline": "Grande aire protégée du nord-ouest du pays",
-      "description": "Grande aire protégée du nord-ouest du pays, savanes et falaises de l'Atacora, faune emblématique (lions, éléphants, hippopotames).",
-      "fact": "Réserve de biosphère de l'UNESCO"
-    },
-    "tanongou": {
-      "name": "Chutes de Tanongou",
-      "tagline": "Cascade et bassin naturel dans la chaîne de l'Atacora",
-      "description": "Cascade et bassin naturel dans la chaîne de l'Atacora.",
-      "fact": "Une chute de 20 mètres de haut"
-    },
-    "dassa": {
-      "name": "Collines de Dassa-Zoumè",
-      "tagline": "Une quarantaine de collines de granit",
-      "description": "Une quarantaine de collines de granit, grottes et sanctuaires, lieu de pèlerinage marial et de traditions vodun.",
-      "fact": "Lieu de coexistence religieuse"
-    },
-    "abomey": {
-      "name": "Palais royaux d'Abomey",
-      "tagline": "Ancienne capitale du royaume du Danxomè",
-      "description": "Ancienne capitale du royaume du Danxomè (Dahomey), palais des douze rois ornés de bas-reliefs, classé au patrimoine mondial de l'UNESCO.",
-      "fact": "Classé au patrimoine mondial"
-    },
-    "ouidah": {
-      "name": "Ouidah",
-      "tagline": "Ancien comptoir sur la route de la traite transatlantique",
-      "description": "Ancien comptoir sur la route de la traite transatlantique (Route des Esclaves, Porte du Non-Retour), aussi berceau du culte vodun (Temple des Pythons, festival international du Vodun).",
-      "fact": "Berceau du culte vodun"
-    },
-    "foret-kpasse": {
-      "name": "Forêt sacrée de Kpassè",
-      "tagline": "Îlot forestier au cœur de Ouidah",
-      "description": "Îlot forestier au cœur de Ouidah (environ 4 hectares aujourd'hui, contre une trentaine à l'origine), dédié au roi Kpassè, fondateur légendaire de la ville, dont l'esprit serait incarné dans un arbre sacré (iroko) en son centre. Fonctionne aussi comme musée à ciel ouvert : statues de divinités vodun (Mami Wata, Gou, Tolègba...), notamment celles du sculpteur Cyprien Tokoudagba. Site de cérémonies rituelles.",
-      "fact": "Musée à ciel ouvert de statues vodun"
-    },
-    "ganvie": {
-      "name": "Ganvié",
-      "tagline": "Cité lacustre",
-      "description": "Cité lacustre bâtie sur pilotis au milieu du lac Nokoué.",
-      "fact": "La Venise de l'Afrique"
-    },
-    "cotonou": {
-      "name": "Cotonou",
-      "tagline": "Poumon économique du pays",
-      "description": "Plus grande ville et poumon économique du pays, marché de Dantokpa, scène artistique en plein essor.",
-      "fact": "Plus grand marché d'Afrique de l'Ouest"
-    },
-    "amazone": {
-      "name": "Monument Amazone",
-      "tagline": "Hommage aux guerrières Agoodjié",
-      "description": "Statue monumentale de bronze de 30 mètres de haut (environ 150 tonnes), inaugurée le 30 juillet 2022 sur l'esplanade des Amazones à Cotonou, face à l'océan Atlantique. Œuvre du sculpteur chinois Li Xiangqun, elle rend hommage aux Agoodjié — les Amazones du Dahomey, régiment militaire entièrement féminin actif jusqu'à la fin du XIXe siècle. C'est la deuxième plus grande statue d'Afrique après le Monument de la Renaissance africaine à Dakar.",
-      "fact": "30 mètres, hommage aux guerrières Agoodjié"
-    },
-    "bio-guera": {
-      "name": "Monument Bio Guéra",
-      "tagline": "Figure de la résistance à la colonisation",
-      "description": "Statue équestre de bronze, cuivre et acier (environ 7 mètres de haut, 13 tonnes), érigée au rond-point de l'aéroport international de Cotonou et inaugurée le 30 juillet 2022. Elle honore Bio Guéra, prince du royaume bariba et chef de guerre wasangari, figure de la résistance face à la conquête coloniale française à la fin du XIXe siècle, mort en 1916 près de Bembéréké.",
-      "fact": "Figure de la résistance à la colonisation"
-    },
-    "porto-novo": {
-      "name": "Porto-Novo",
-      "tagline": "Capitale officielle du Bénin",
-      "description": "Capitale officielle du Bénin, architecture afro-brésilienne, palais royal, influences yoruba.",
-      "fact": "Architecture afro-brésilienne"
-    },
-    "grand-popo": {
-      "name": "Grand-Popo",
-      "tagline": "Plages tranquilles à l'embouchure du fleuve Mono",
-      "description": "Plages tranquilles à l'embouchure du fleuve Mono.",
-      "fact": "Embouchure du fleuve Mono"
-    }
   }
 }
