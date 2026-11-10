@@ -7,8 +7,55 @@
     "loading": "Loading...",
     "noWebGL": "Your browser does not support 3D.",
     "journeyOutroTitle": "The journey continues",
-    "journeyOutroText": "Six stops, one trail — so many places and celebrations still to discover in Benin.",
+    "journeyOutroText": "Four stops, one trail — so many places and stories still to discover in Benin.",
     "scrollHint": "Scroll",
+    "rotateHint": "Drag to rotate",
+    "step": "Step",
+    "factLabel": "Did you know",
     "close": "Close"
+  },
+  "journey": {
+    "navLabel": "Journey stops",
+    "types": {
+      "monument": "Monument",
+      "evenement": "Event",
+      "histoire": "History",
+      "nature": "Nature"
+    },
+    "sections": {
+      "amazone": {
+        "name": "Amazon Monument",
+        "tagline": "A tribute to the Agoodjié warriors",
+        "description": "A 30-metre-tall bronze monument, weighing around 150 tonnes, unveiled on 30 July 2022 on the Esplanade des Amazones in Cotonou, facing the Atlantic Ocean. Created by sculptor Li Xiangqun, it honours the Agoodjié — the women warriors of Dahomey, an all-female military regiment active until the late 19th century.",
+        "location": "Cotonou",
+        "fact": "Africa's second-tallest statue, after Dakar's African Renaissance Monument."
+      },
+      "bio-guera": {
+        "name": "Bio Guéra Monument",
+        "tagline": "A symbol of resistance to colonial rule",
+        "description": "An equestrian statue in bronze, copper and steel, about 7 metres tall and weighing 13 tonnes. It stands at the roundabout near Cotonou International Airport and was unveiled on 30 July 2022. The monument honours Bio Guéra, a Bariba prince and Wasangari war leader who resisted the French colonial conquest in the late 19th century.",
+        "location": "Cotonou",
+        "fact": "A Bariba resistance leader, killed in 1916 near Bembérékè."
+      },
+      "behanzin": {
+        "name": "King Béhanzin Statue",
+        "tagline": "The last defiant king of Dahomey",
+        "description": "A statue of King Béhanzin (1845–1906), the last independent ruler of Dahomey, in Abomey, the kingdom's former capital. Crowned in 1889, he led fierce resistance against the French in the wars of 1890 and 1892–1894. Captured and exiled first to Martinique and then to Algeria, he died in 1906. His legacy remains a symbol of resistance across Benin.",
+        "location": "Abomey",
+        "fact": "His throne and royal treasures were returned to Benin in 2021."
+      },
+      "porte-non-retour": {
+        "name": "Door of No Return",
+        "tagline": "A threshold of remembrance",
+        "description": "On Ouidah beach, the monumental arch known as the Door of No Return commemorates the departure of captives for the Americas during the transatlantic slave trade. A place for remembrance and reflection, it marks the end of the more than three-kilometre Slave Route.",
+        "location": "Ouidah",
+        "fact": "At the end of the Slave Route, facing the ocean."
+      }
+    }
+  },
+  "about": {
+    "intro": "Bénin Explore is an experimental project that showcases Benin's natural, cultural and historical heritage through an immersive 3D web experience.",
+    "design": "Designed as a stylised visual experience, the site moves beyond traditional photography in favour of geometric and symbolic representations inspired by Abomey's appliqué textiles and local landscapes.",
+    "stack": "Built with Next.js, React Three Fiber and Tailwind CSS"
   }
 }

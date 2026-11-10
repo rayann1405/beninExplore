@@ -1,4 +1,5 @@
 import localFont from 'next/font/local';
+import { getLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import './globals.css';
@@ -34,9 +35,11 @@ export const metadata: Metadata = {
     'Un parcours immersif à travers le patrimoine, la culture et l’histoire du Bénin.',
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default async function RootLayout({ children }: { children: ReactNode }) {
+  const locale = await getLocale();
+
   return (
-    <html lang="fr" className={`${fraunces.variable} ${ibmSans.variable} ${ibmMono.variable}`}>
+    <html lang={locale} className={`${fraunces.variable} ${ibmSans.variable} ${ibmMono.variable}`}>
       <body className="flex min-h-screen flex-col antialiased">{children}</body>
     </html>
   );

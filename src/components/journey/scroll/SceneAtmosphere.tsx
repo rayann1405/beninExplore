@@ -33,7 +33,8 @@ export default function SceneAtmosphere() {
     <>
       <color attach="background" args={['#000000']} ref={background} />
       <fog ref={fog} attach="fog" args={fogArgs} />
-      <ambientLight ref={ambient} intensity={0.6} />
+      {/* Ambiance faible : la sculpture vient des lumières directionnelles */}
+      <ambientLight ref={ambient} intensity={0.18} />
     </>
   );
 }

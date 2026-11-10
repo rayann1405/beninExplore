@@ -1,28 +1,39 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0B0A07;
-  --foreground: #F5EFE2;
-  --color-ink: #0B0A07;
-  --color-paper: #F5EFE2;
+  --background: #0D0905;
+  --foreground: #F2E8D5;
+  --color-ink: #0D0905;
+  --color-ink-deep: #0A0603;
+  --color-paper: #F2E8D5;
+  --color-sand: #D8C6A4;
+  --color-sand-light: #EDE0C6;
   --color-laterite: #C14B1A;
-  --color-laterite-light: #E8743B;
-  --color-gold: #E0A83E;
-  --color-gold-light: #F2C878;
-  --color-palm: #2E6B4E;
-  --color-palm-light: #55B184;
-  --color-indigo: #233C63;
-  --color-indigo-light: #93A9C9;
-  --color-bronze: #A8722A;
+  --color-laterite-light: #E5743C;
+  --color-rouge: #8A2412;
+  --color-gold: #DDA33C;
+  --color-gold-light: #EFC877;
+  --color-palm: #1F5B3A;
+  --color-palm-light: #4FA97C;
+  --color-indigo: #15314F;
+  --color-indigo-light: #8CA5C4;
+  --color-bronze: #9C6B1E;
+  --color-flag-green: #008751;
+  --color-flag-yellow: #FCD116;
+  --color-flag-red: #E8112D;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-ink: var(--color-ink);
+  --color-ink-deep: var(--color-ink-deep);
   --color-paper: var(--color-paper);
+  --color-sand: var(--color-sand);
+  --color-sand-light: var(--color-sand-light);
   --color-laterite: var(--color-laterite);
   --color-laterite-light: var(--color-laterite-light);
+  --color-rouge: var(--color-rouge);
   --color-gold: var(--color-gold);
   --color-gold-light: var(--color-gold-light);
   --color-palm: var(--color-palm);
@@ -30,10 +41,13 @@
   --color-indigo: var(--color-indigo);
   --color-indigo-light: var(--color-indigo-light);
   --color-bronze: var(--color-bronze);
+  --color-flag-green: var(--color-flag-green);
+  --color-flag-yellow: var(--color-flag-yellow);
+  --color-flag-red: var(--color-flag-red);
 
-  --font-sans: var(--font-sen);
+  --font-sans: var(--font-ibm-sans);
   --font-mono: var(--font-ibm-mono);
-  --font-display: var(--font-marcellus);
+  --font-display: var(--font-fraunces);
 }
 
 html, body {
@@ -52,17 +66,49 @@ body {
   color: var(--color-ink);
 }
 
-/* Treillis de losanges — clin d'œil aux appliqués Adanhoumè d'Abomey */
-@utility diamond-grid {
+/* Croisillons de tissage — fond de carte façon toile appliquée d'Abomey */
+@utility weave-grid {
   background-image:
-    linear-gradient(45deg, transparent 46%, rgb(224 168 62 / 0.07) 46%, rgb(224 168 62 / 0.07) 50%, transparent 50%),
-    linear-gradient(-45deg, transparent 46%, rgb(224 168 62 / 0.07) 46%, rgb(224 168 62 / 0.07) 50%, transparent 50%);
-  background-size: 72px 72px;
+    linear-gradient(45deg, transparent 45%, rgb(221 163 60 / 0.06) 45%, rgb(221 163 60 / 0.06) 55%, transparent 55%),
+    linear-gradient(-45deg, transparent 45%, rgb(21 49 79 / 0.08) 45%, rgb(21 49 79 / 0.08) 55%, transparent 55%);
+  background-size: 44px 44px;
+}
+
+/* Bande bo hun — liseré multicolore façon bordure de tenture appliquée */
+@utility bo-hun-band {
+  background: linear-gradient(
+    90deg,
+    var(--color-laterite) 0 25%,
+    var(--color-gold) 25% 50%,
+    var(--color-palm) 50% 75%,
+    var(--color-indigo) 75% 100%
+  );
+}
+
+/* Bande drapeau du Bénin — vert, jaune, rouge */
+@utility flag-band {
+  background: linear-gradient(
+    90deg,
+    var(--color-flag-green) 0 33.33%,
+    var(--color-flag-yellow) 33.33% 66.66%,
+    var(--color-flag-red) 66.66% 100%
+  );
 }
 
 /* Grain cinématographique subtil par-dessus la scène 3D */
 @utility grain {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");
+}
+
+/* Invitation à défiler : point doré descendant le long d'un filet vertical */
+@utility scroll-cue {
+  animation: scroll-cue 2.2s ease-in-out infinite;
+}
+@keyframes scroll-cue {
+  0%   { transform: translateY(-2px); opacity: 0; }
+  25%  { opacity: 1; }
+  75%  { opacity: 1; }
+  100% { transform: translateY(14px); opacity: 0; }
 }
 
 /* Custom scrollbar for webkit */

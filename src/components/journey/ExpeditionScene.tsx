@@ -4,6 +4,7 @@ import { journey } from '@/lib/data/journey';
 import { sectionPosition } from './scroll/computeCamera';
 import { paletteFor } from './decor/palette';
 import Particles from './decor/Particles';
+import Glow from './decor/Glow';
 import AssetModel from './AssetModel';
 import DefaultScene from './decor/DefaultScene';
 import SceneAtmosphere from './scroll/SceneAtmosphere';
@@ -19,6 +20,13 @@ export default function ExpeditionScene() {
       <SceneAtmosphere />
       <JourneyCamera />
 
+      {/* Éclairage à dominante chaude : directionnelle or (relief, reflets)
+          + hémisphère sable/terre (remplissage doux). La matière PBR du
+          scan est révélée par la lumière, sans teinte imposée sur le mesh. */}
+      <directionalLight position={[7, 10, 9]} intensity={1.5} color="#FFE1AE" />
+      <directionalLight position={[-9, 5, -6]} intensity={0.35} color="#7F93B8" />
+      <hemisphereLight args={['#C9B48A', '#5A2410', 0.65]} />
+
       {journey.map((section, i) => {
         const palette = paletteFor(section.palette);
         const position = sectionPosition(i, journey.length);
@@ -27,11 +35,13 @@ export default function ExpeditionScene() {
             <Particles palette={palette} position={[position[0], 0, position[2]]} radius={7} />
             {section.asset ? (
               <>
+                <Glow color={palette.light} position={[position[0], 2, position[2] - 1]} />
                 <pointLight
                   position={[position[0], 5, 3]}
                   color={palette.light}
-                  intensity={25}
-                  distance={20}
+                  intensity={16}
+                  distance={18}
+                  decay={1.6}
                 />
                 <Suspense fallback={null}>
                   <AssetModel asset={section.asset} index={i} position={position} accent={palette.accent} />
