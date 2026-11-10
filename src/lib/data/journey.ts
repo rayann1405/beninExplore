@@ -77,28 +77,4 @@ export const journey: JourneySection[] = [
     palette: 'nuit-indigo',
     asset: { url: '/modele/tier1/porte_du_non_retour.opt.glb', scale: 9 },
   },
-  {
-    id: 'vodun-days',
-    type: 'evenement',
-    name: 'Vodun Days',
-    tagline: 'La célébration nationale du vodun',
-    dates: '10 janvier, chaque année',
-    description:
-      "Chaque 10 janvier, le Bénin célèbre la fête nationale du vodun, principalement à Ouidah, berceau du culte. Cérémonies, défilés et rituels rassemblent pratiquants, curieux et diaspora autour d'une tradition vivante.",
-    location: 'Ouidah',
-    fact: 'Journée nationale des religions endogènes',
-    palette: 'nuit-indigo',
-  },
-  {
-    id: 'weloveya',
-    type: 'evenement',
-    name: 'We Love Ya',
-    tagline: 'Le grand festival afrobeat',
-    dates: 'fin décembre, chaque année',
-    description:
-      "Festival de musique afrobeat organisé chaque fin d'année à Cotonou, We Love Ya réunit les scènes béninoises et internationales pour plusieurs jours de concerts, de danses et de célébration de la culture ouest-africaine.",
-    location: 'Cotonou',
-    fact: 'Le rendez-vous musical de fin d’année',
-    palette: 'fete',
-  },
 ];

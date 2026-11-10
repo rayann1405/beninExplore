@@ -42,7 +42,7 @@ interface JourneySection {
 
 - Positions de caméra : calculées dans `src/components/journey/scroll/computeCamera.ts` (`sectionPosition(i, count)` + trajectoire lissée `sampleJourney(t)`). Espacement régulier le long de l'axe X (constante `JOURNEY_STEP`). Le cadrage est **adaptatif** : la caméra monte et recule selon la hauteur réelle du contenu de chaque section (bounding box du modèle mesurée au runtime, `scroll/sectionHeights.ts`) — un monument haut est cadré en entier, un petit est rapproché. Facteurs réglables : `CAMERA_HEIGHT_FACTOR` / `CAMERA_DISTANCE_FACTOR` / `LOOK_HEIGHT_FACTOR`.
 - Palettes : `src/components/journey/decor/palette.ts` (couleur du fond, brouillard, lumière, accent, particules).
-- Registre visuel : `monument` = sobre (totem, lumière posée) ; `evenement` = arène lumineuse ; `weloveya` (`fete`) = festif et coloré ; `vodun-days` (`nuit-indigo`) = nocturne posé, jamais folklorisé.
+- Registre visuel : les décors et lumières s'adaptent à la palette de chaque étape.
 
 ## Ajouter une nouvelle étape
 

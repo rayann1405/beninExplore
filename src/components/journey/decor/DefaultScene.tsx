@@ -14,8 +14,7 @@ interface DefaultSceneProps {
 
 // Ambiance de décor pour une section sans modèle 3D : jamais de vide ni de
 // placeholder flottant. Registre différencié — monument : totem sobre ;
-// événement : arène lumineuse (weloveya = palette fete, vive et colorée ;
-// vodun-days = nuit-indigo posée, jamais folklorisée). Halo au sol + lumière
+// événement : arène lumineuse. Halo au sol + lumière
 // d'accent + particules, tout dérivé de la palette.
 export default function DefaultScene({ section, palette, position }: DefaultSceneProps) {
   const glow = useRef<THREE.PointLight>(null);
