@@ -54,6 +54,42 @@ export const journey: JourneySection[] = [
     asset: { url: '/modele/tier1/bio-guera.opt.glb', scale: 4 },
   },
   {
+    id: 'jarre-trouee',
+    type: 'monument',
+    name: 'Monument de la Jarre trouée',
+    tagline: "L'unité fait la force",
+    description:
+      "Cette sculpture monumentale représente une jarre percée soutenue par plusieurs personnages. Elle évoque la solidarité : c'est l'union des efforts qui permet à la jarre de retenir l'eau.",
+    location: 'Bénin',
+    fact: 'Une image de solidarité collective.',
+    palette: 'cotonou',
+    asset: { url: '/modele/tier1/jarre-trouee.opt.glb', scale: 6 },
+  },
+  {
+    id: 'mosquee-porto',
+    type: 'monument',
+    name: 'Grande Mosquée de Porto-Novo',
+    tagline: 'Un patrimoine architectural singulier',
+    description:
+      "Au cœur de Porto-Novo, la Grande Mosquée est un monument emblématique de la ville. Sa façade richement décorée et ses formes architecturales témoignent de l'histoire urbaine et des échanges culturels de la capitale.",
+    location: 'Porto-Novo',
+    fact: 'Un édifice emblématique du patrimoine de Porto-Novo.',
+    palette: 'porto-novo',
+    asset: { url: '/modele/tier1/mosquee-porto.opt.glb', scale: 7 },
+  },
+  {
+    id: 'egungun',
+    type: 'histoire',
+    name: 'Masque Egungun',
+    tagline: 'La mémoire des ancêtres en mouvement',
+    description:
+      "Dans les traditions yoruba du Bénin, les Egungun sont des figures masquées associées au culte des ancêtres. Leurs apparitions cérémonielles, portées par des costumes colorés et le mouvement, expriment un lien entre les vivants et les ancêtres.",
+    location: 'Bénin',
+    fact: 'Le costume et la danse sont au cœur des sorties Egungun.',
+    palette: 'porto-novo',
+    asset: { url: '/modele/tier1/egungun.opt.glb', scale: 5.5 },
+  },
+  {
     id: 'behanzin',
     type: 'monument',
     name: 'Statue du roi Béhanzin',

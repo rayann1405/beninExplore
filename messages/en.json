@@ -7,7 +7,7 @@
     "loading": "Loading...",
     "noWebGL": "Your browser does not support 3D.",
     "journeyOutroTitle": "The journey continues",
-    "journeyOutroText": "Four stops, one trail — so many places and stories still to discover in Benin.",
+    "journeyOutroText": "Seven stops, one trail — so many places and stories still to discover in Benin.",
     "scrollHint": "Scroll",
     "rotateHint": "Drag to rotate",
     "step": "Step",
@@ -36,6 +36,27 @@
         "description": "An equestrian statue in bronze, copper and steel, about 7 metres tall and weighing 13 tonnes. It stands at the roundabout near Cotonou International Airport and was unveiled on 30 July 2022. The monument honours Bio Guéra, a Bariba prince and Wasangari war leader who resisted the French colonial conquest in the late 19th century.",
         "location": "Cotonou",
         "fact": "A Bariba resistance leader, killed in 1916 near Bembérékè."
+      },
+      "jarre-trouee": {
+        "name": "The Perforated Jar Monument",
+        "tagline": "Unity is strength",
+        "description": "This monumental sculpture depicts a perforated jar held up by several figures. It evokes solidarity: only through shared effort can the jar hold water.",
+        "location": "Benin",
+        "fact": "An image of collective solidarity."
+      },
+      "mosquee-porto": {
+        "name": "Great Mosque of Porto-Novo",
+        "tagline": "A distinctive architectural heritage",
+        "description": "At the heart of Porto-Novo, the Great Mosque is one of the city's landmarks. Its richly decorated facade and architectural forms reflect the urban history and cultural exchanges of the capital.",
+        "location": "Porto-Novo",
+        "fact": "A landmark of Porto-Novo's heritage."
+      },
+      "egungun": {
+        "name": "Egungun Masquerade",
+        "tagline": "The memory of ancestors in motion",
+        "description": "In Benin's Yoruba traditions, Egungun are masked figures associated with the veneration of ancestors. Their ceremonial appearances, colourful costumes and movement express a link between the living and their ancestors.",
+        "location": "Benin",
+        "fact": "Costume and dance are central to Egungun appearances."
       },
       "behanzin": {
         "name": "King Béhanzin Statue",
