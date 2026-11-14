@@ -11,7 +11,7 @@ export const JOURNEY_STEP = 16; // espacement entre sections sur l'axe X
 // (modèle mesuré au runtime, ou décor par défaut) pour que le monument soit
 // visible en entier dans le cadre, quelle que soit sa taille.
 export const CAMERA_HEIGHT_FACTOR = 0.55; // hauteur caméra = max(H × 0.55, 3)
-export const CAMERA_DISTANCE_FACTOR = 1.55; // recul = H × 1.55
+export const CAMERA_DISTANCE_FACTOR = 2.9; // recul = H × 2.9
 export const LOOK_HEIGHT_FACTOR = 0.45; // point visé = H × 0.45
 
 export function sectionPosition(index: number, count = journey.length): [number, number, number] {
