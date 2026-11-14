@@ -4,16 +4,18 @@ import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
 import ExpeditionScene from './ExpeditionScene';
 import { useJourneyStore } from '@/lib/store';
-import { DRAG_SENSITIVITY, modelInteraction } from './scroll/modelInteraction';
+import { DRAG_SENSITIVITY, DOUBLE_PRESS_MS, DOUBLE_PRESS_SLOP, modelInteraction } from './scroll/modelInteraction';
 
 // Canvas opaque plein écran. Le fond et le brouillard sont pilotés par
 // SceneAtmosphere (crossfade de palette lié au scroll), la caméra par
 // JourneyCamera (trajectoire dérivée de `journey.length`).
 //
-// Rotation manuelle au pointeur : un cliqué-glissé horizontal sur le canvas
-// fait pivoter le monument sur son axe Y — jamais la caméra (elle reste pilotée
-// par le scroll). `touch-action: pan-y` : le glissement horizontal pivote, le
-// scroll vertical continue de faire avancer le parcours (un doigt sur mobile).
+// Rotation manuelle : double-clic (ou double-tap) sur la scène puis maintien du
+// doigt/bouton → un glissé horizontal fait pivoter le monument actif sur son
+// axe Y, jamais la caméra (elle reste pilotée par le scroll). Un appui simple
+// n'arme rien, pour ne pas pivoter accidentellement pendant le défilement.
+// `touch-action: pan-y` : le glissement horizontal pivote, le scroll vertical
+// continue de faire avancer le parcours (un doigt sur mobile).
 export default function SceneCanvas() {
   const wrapRef = useRef<HTMLDivElement>(null);
 
@@ -28,13 +30,24 @@ export default function SceneCanvas() {
 
     const onDown = (e: PointerEvent) => {
       if (e.pointerType === 'mouse' && e.button !== 0) return;
+
+      const now = performance.now();
+      const dx = e.clientX - modelInteraction.lastPressX;
+      const dy = e.clientY - modelInteraction.lastPressY;
+      const isDoublePress =
+        now - modelInteraction.lastPressAt <= DOUBLE_PRESS_MS &&
+        Math.hypot(dx, dy) <= DOUBLE_PRESS_SLOP;
+
+      modelInteraction.lastPressAt = now;
+      modelInteraction.lastPressX = e.clientX;
+      modelInteraction.lastPressY = e.clientY;
+
+      if (!isDoublePress) return;
+
       modelInteraction.dragging = true;
       modelInteraction.lastPointerX = e.clientX;
-      modelInteraction.lastInteractAt = performance.now();
-      if (e.pointerType === 'mouse') {
-        el.style.cursor = 'grabbing';
-        el.setPointerCapture(e.pointerId);
-      }
+      el.style.cursor = 'grabbing';
+      el.setPointerCapture(e.pointerId);
     };
 
     const onMove = (e: PointerEvent) => {
@@ -45,12 +58,10 @@ export default function SceneCanvas() {
       const active = useJourneyStore.getState().activeSectionIndex;
       const manual = modelInteraction.manual;
       manual.set(active, (manual.get(active) ?? 0) + dx * DRAG_SENSITIVITY);
-      modelInteraction.lastInteractAt = performance.now();
     };
 
     const onUp = () => {
       modelInteraction.dragging = false;
-      modelInteraction.lastInteractAt = performance.now();
       el.style.cursor = 'grab';
     };
 

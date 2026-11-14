@@ -48,7 +48,7 @@ export default function JourneySections() {
   }, []);
 
   return (
-    <div data-journey-scroll className="relative z-10">
+    <div data-journey-scroll className="pointer-events-none relative z-10">
       {journey.map((section, i) => (
         <section
           key={section.id}

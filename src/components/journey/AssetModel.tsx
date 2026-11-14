@@ -7,7 +7,6 @@ import type { JourneyAsset } from '@/lib/data/journey';
 import { setSectionHeight } from './scroll/sectionHeights';
 import {
   AUTO_ROTATE_SPEED,
-  IDLE_RESUME_MS,
   modelInteraction,
 } from './scroll/modelInteraction';
 import { prefersReducedMotion } from './scroll/useJourneyScroll';
@@ -26,9 +25,9 @@ interface AssetModelProps {
 // conservé — c'est l'éclairage (ExpeditionScene) qui sculpte la matière.
 //
 // Rotation : l'utilisateur peut pivoter le modèle sur son axe Y au pointeur
-// (SceneCanvas écrit modelInteraction.manual). Au repos, une lente
-// rotation automatique reprend (sauf prefers-reduced-motion) ; elle s'interrompt
-// dès qu'on touche au modèle et reprend après quelques secondes d'inactivité.
+// (SceneCanvas écrit modelInteraction.manual). La rotation automatique reste
+// toujours active : elle s'additionne au geste manuel sans jamais s'arrêter
+// (sauf prefers-reduced-motion).
 export default function AssetModel({ asset, index, position, accent }: AssetModelProps) {
   const { scene } = useGLTF(asset.url, true);
   const groupRef = useRef<THREE.Group>(null);
@@ -47,8 +46,7 @@ export default function AssetModel({ asset, index, position, accent }: AssetMode
   useFrame((_, delta) => {
     const g = groupRef.current;
     if (!g) return;
-    const now = performance.now();
-    if (!prefersReducedMotion && !modelInteraction.dragging && now - modelInteraction.lastInteractAt > IDLE_RESUME_MS) {
+    if (!prefersReducedMotion) {
       const auto = modelInteraction.auto.get(index) ?? 0;
       modelInteraction.auto.set(index, auto + delta * AUTO_ROTATE_SPEED);
     }
